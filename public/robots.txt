@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://retire.loanpaylogic.com/sitemap.xml
