@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import ConsentBanner from "../lib/consent";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -66,6 +67,9 @@ function Footer() {
             {link.label}
           </Link>
         ))}
+        <Link href="/privacy-policy" className="transition hover:text-white">
+          Do Not Sell / Privacy Choices
+        </Link>
       </div>
       <p className="mt-4">
         &copy; {new Date().getFullYear()} retire.loanpaylogic.com. Educational content only, not
@@ -86,9 +90,10 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ConsentBanner />
         <Script
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4906207495792820"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           crossOrigin="anonymous"
         />
       </body>

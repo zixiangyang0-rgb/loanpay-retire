@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../components/AdSlot";
+import { orgJsonLd, websiteJsonLd } from "../lib/schema";
 
 export const metadata: Metadata = {
   title: "LoanPay Retire | Retirement Planning Guides and Estimators",
@@ -194,6 +196,14 @@ const clusters: Cluster[] = [
 export default function HomePage() {
   return (
     <div className="mx-auto w-full max-w-5xl px-6 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
+      />
       <section className="glass-panel page-aurora rounded-3xl px-8 py-14 text-center sm:px-12">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-200/80">
           retire.loanpaylogic.com
@@ -221,6 +231,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <AdSlot format="display" slot="TODO-retire-display-home" />
 
       {clusters.map((cluster) => (
         <section key={cluster.id} className="mt-12">

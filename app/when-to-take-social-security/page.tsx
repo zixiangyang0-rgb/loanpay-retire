@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "When to Take Social Security: 62 vs. 67 vs. 70 | LoanPay Retire",
@@ -35,6 +37,10 @@ export default function WhenToTakeSSPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -45,6 +51,7 @@ export default function WhenToTakeSSPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">How the benefit formula moves with age</h2>
@@ -128,25 +135,27 @@ export default function WhenToTakeSSPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does waiting to 70 always win?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does waiting to 70 always win?</summary>
               <p className="mt-1">Only with longevity. Single, in poor health, or needing the income now? Early claiming is often rational. Married with a much younger spouse or long-lived family? Delaying the higher benefit is powerful longevity insurance.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I change my mind after filing?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I change my mind after filing?</summary>
               <p className="mt-1">Within 12 months you may withdraw your application and repay everything received — a once-per-lifetime reset. After FRA you may also suspend benefits to earn delayed credits until 70.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do ex-spouses affect my benefit?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do ex-spouses affect my benefit?</summary>
               <p className="mt-1">A divorced spouse married 10+ years may claim on your record without reducing your check, and your remarriage rules differ from theirs. Survivor options for ex-spouses largely mirror current-spouse rules.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Will Social Security run out?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Will Social Security run out?</summary>
               <p className="mt-1">Trustees project the combined trust funds can pay full benefits into the mid-2030s, then about 75–80% from payroll taxes absent legislation. Plan conservatively, but not as if checks drop to zero.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -161,6 +170,22 @@ export default function WhenToTakeSSPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "When to Take Social Security: 62 vs. 67 vs. 70 | LoanPay Retire", description: "Claim at 62, full retirement age, or 70? Benefit math, break-even ages, spousal and survivor angles, and working-while-claiming rules.", url: "https://retire.loanpaylogic.com/when-to-take-social-security" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Does waiting to 70 always win?","answer":"Only with longevity. Single, in poor health, or needing the income now? Early claiming is often rational. Married with a much younger spouse or long-lived family? Delaying the higher benefit is powerful longevity insurance."},{"question":"Can I change my mind after filing?","answer":"Within 12 months you may withdraw your application and repay everything received — a once-per-lifetime reset. After FRA you may also suspend benefits to earn delayed credits until 70."},{"question":"Do ex-spouses affect my benefit?","answer":"A divorced spouse married 10+ years may claim on your record without reducing your check, and your remarriage rules differ from theirs. Survivor options for ex-spouses largely mirror current-spouse rules."},{"question":"Will Social Security run out?","answer":"Trustees project the combined trust funds can pay full benefits into the mid-2030s, then about 75–80% from payroll taxes absent legislation. Plan conservatively, but not as if checks drop to zero."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "When to Take Social Security: 62 vs. 67 vs. 70 | LoanPay Retire", url: "https://retire.loanpaylogic.com/when-to-take-social-security" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

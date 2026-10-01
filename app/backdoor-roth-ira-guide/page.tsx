@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Backdoor Roth IRA Guide 2026 (Step by Step) | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function BackdoorPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function BackdoorPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">The two steps, precisely</h2>
@@ -134,25 +141,27 @@ export default function BackdoorPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Is the backdoor Roth legal?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Is the backdoor Roth legal?</summary>
               <p className="mt-1">Yes. Congress blessed it explicitly in 2010 by removing conversion income limits, and IRS guidance plus years of Form 8606 processing confirm it. The step-transaction doctrine is occasionally debated but has never prevailed against clean backdoors.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">How long must I wait between contribution and conversion?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">How long must I wait between contribution and conversion?</summary>
               <p className="mt-1">No law sets a waiting period — days suffice once funds settle. Some advisers suggest a statement cycle out of caution, but prompt conversion minimizes taxable interim earnings.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I do it if I have a SEP or SIMPLE IRA?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I do it if I have a SEP or SIMPLE IRA?</summary>
               <p className="mt-1">Those balances count in the pro-rata aggregation too. Roll SEP/SIMPLE pre-tax money into a 401(k) first, or skip the backdoor that year.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What if I already have commingled basis?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What if I already have commingled basis?</summary>
               <p className="mt-1">File Form 8606 to track basis, consider isolating pre-tax money via reverse rollover (basis cannot enter a 401(k) — only pre-tax dollars move), then resume clean yearly backdoors.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -167,6 +176,22 @@ export default function BackdoorPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Backdoor Roth IRA Guide 2026 (Step by Step) | LoanPay Retire", description: "Backdoor Roth IRA for 2026: the two-step process, pro-rata rule math, Form 8606, timing mistakes, and who should skip it.", url: "https://retire.loanpaylogic.com/backdoor-roth-ira-guide" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Is the backdoor Roth legal?","answer":"Yes. Congress blessed it explicitly in 2010 by removing conversion income limits, and IRS guidance plus years of Form 8606 processing confirm it. The step-transaction doctrine is occasionally debated but has never prevailed against clean backdoors."},{"question":"How long must I wait between contribution and conversion?","answer":"No law sets a waiting period — days suffice once funds settle. Some advisers suggest a statement cycle out of caution, but prompt conversion minimizes taxable interim earnings."},{"question":"Can I do it if I have a SEP or SIMPLE IRA?","answer":"Those balances count in the pro-rata aggregation too. Roll SEP/SIMPLE pre-tax money into a 401(k) first, or skip the backdoor that year."},{"question":"What if I already have commingled basis?","answer":"File Form 8606 to track basis, consider isolating pre-tax money via reverse rollover (basis cannot enter a 401(k) — only pre-tax dollars move), then resume clean yearly backdoors."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Backdoor Roth IRA Guide 2026 (Step by Step) | LoanPay Retire", url: "https://retire.loanpaylogic.com/backdoor-roth-ira-guide" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

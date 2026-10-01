@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Mega Backdoor Roth Explained 2026 | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function MegaBackdoorPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function MegaBackdoorPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">The ceiling math for 2026</h2>
@@ -129,25 +136,27 @@ export default function MegaBackdoorPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">After-tax vs. Roth — aren't they the same?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">After-tax vs. Roth — aren't they the same?</summary>
               <p className="mt-1">No. Roth contributions ($24,500 cap) grow tax-free. After-tax non-Roth contributions (up to the $72,000 total) grow tax-deferred — only conversion makes their future growth tax-free.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does my plan support this?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does my plan support this?</summary>
               <p className="mt-1">Ask two questions: (1) does it accept after-tax non-Roth contributions, and (2) does it allow in-service withdrawals or in-plan Roth conversions of those dollars? Both answers must be yes.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Are conversions of after-tax money taxable?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Are conversions of after-tax money taxable?</summary>
               <p className="mt-1">Only the earnings portion. Convert quickly and the taxable sliver is pennies. Let $40,000 sit for a year earning $3,000 and that $3,000 is taxable on conversion — automate it.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can highly compensated employees use it?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can highly compensated employees use it?</summary>
               <p className="mt-1">Often yes, but ACP testing limits after-tax contributions at some companies, with excess refunded (plus earnings) early the next year. Check with benefits before committing cash flow.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -162,6 +171,22 @@ export default function MegaBackdoorPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Mega Backdoor Roth Explained 2026 | LoanPay Retire", description: "Mega backdoor Roth: after-tax 401(k) contributions up to the $72,000 ceiling, in-service withdrawals, plan requirements, and pro-rata pitfalls.", url: "https://retire.loanpaylogic.com/mega-backdoor-roth-explained" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"After-tax vs. Roth — aren't they the same?","answer":"No. Roth contributions ($24,500 cap) grow tax-free. After-tax non-Roth contributions (up to the $72,000 total) grow tax-deferred — only conversion makes their future growth tax-free."},{"question":"Does my plan support this?","answer":"Ask two questions: (1) does it accept after-tax non-Roth contributions, and (2) does it allow in-service withdrawals or in-plan Roth conversions of those dollars? Both answers must be yes."},{"question":"Are conversions of after-tax money taxable?","answer":"Only the earnings portion. Convert quickly and the taxable sliver is pennies. Let $40,000 sit for a year earning $3,000 and that $3,000 is taxable on conversion — automate it."},{"question":"Can highly compensated employees use it?","answer":"Often yes, but ACP testing limits after-tax contributions at some companies, with excess refunded (plus earnings) early the next year. Check with benefits before committing cash flow."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Mega Backdoor Roth Explained 2026 | LoanPay Retire", url: "https://retire.loanpaylogic.com/mega-backdoor-roth-explained" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

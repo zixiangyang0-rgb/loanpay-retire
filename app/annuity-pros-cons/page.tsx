@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Annuity Pros & Cons: SPIA, DIA, Variable | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function AnnuityPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function AnnuityPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">The four species, honestly priced</h2>
@@ -137,25 +144,27 @@ export default function AnnuityPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What happens to my money if I die early?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What happens to my money if I die early?</summary>
               <p className="mt-1">A bare life-only SPIA keeps the balance — the mortality-credit bargain. Cash-refund or period-certain riders return unpaid principal to heirs for a ~5–15% payment haircut.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do annuities adjust for inflation?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do annuities adjust for inflation?</summary>
               <p className="mt-1">Inflation-indexed SPIAs exist but start ~20–30% lower than fixed ones. Most buyers prefer higher fixed payments plus portfolio growth to offset inflation instead.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Are free-dinner annuity seminars trustworthy?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Are free-dinner annuity seminars trustworthy?</summary>
               <p className="mt-1">Treat them as sales events: indexed and variable annuities dominate pitches because commissions run 5–8%. Take the materials home, compare with fiduciary advice, never sign same-day.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I hold an annuity inside an IRA?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I hold an annuity inside an IRA?</summary>
               <p className="mt-1">Yes — QLACs are the purpose-built version, and ordinary DIAs/SPIAs can sit in IRAs too (no extra tax benefit, so weigh costs). Required minimum distributions still apply except QLAC-shielded amounts.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -170,6 +179,22 @@ export default function AnnuityPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Annuity Pros & Cons: SPIA, DIA, Variable | LoanPay Retire", description: "Annuities for retirement: single-premium, deferred, variable and indexed — mortality credits, fees, inflation, and when they fit.", url: "https://retire.loanpaylogic.com/annuity-pros-cons" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"What happens to my money if I die early?","answer":"A bare life-only SPIA keeps the balance — the mortality-credit bargain. Cash-refund or period-certain riders return unpaid principal to heirs for a ~5–15% payment haircut."},{"question":"Do annuities adjust for inflation?","answer":"Inflation-indexed SPIAs exist but start ~20–30% lower than fixed ones. Most buyers prefer higher fixed payments plus portfolio growth to offset inflation instead."},{"question":"Are free-dinner annuity seminars trustworthy?","answer":"Treat them as sales events: indexed and variable annuities dominate pitches because commissions run 5–8%. Take the materials home, compare with fiduciary advice, never sign same-day."},{"question":"Can I hold an annuity inside an IRA?","answer":"Yes — QLACs are the purpose-built version, and ordinary DIAs/SPIAs can sit in IRAs too (no extra tax benefit, so weigh costs). Required minimum distributions still apply except QLAC-shielded amounts."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Annuity Pros & Cons: SPIA, DIA, Variable | LoanPay Retire", url: "https://retire.loanpaylogic.com/annuity-pros-cons" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

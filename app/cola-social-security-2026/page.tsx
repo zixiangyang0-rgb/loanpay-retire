@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "COLA & Social Security 2026: 2.8% Raise Guide | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function ColaPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function ColaPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">How the 2.8% is built</h2>
@@ -133,25 +140,27 @@ export default function ColaPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">When does the 2026 COLA hit my check?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">When does the 2026 COLA hit my check?</summary>
               <p className="mt-1">January 2026 for Social Security (paid in January); SSI payments reflect it in late December 2025. Notices arrive by mail and in my Social Security accounts in December.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does the COLA apply if I delay to 70?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does the COLA apply if I delay to 70?</summary>
               <p className="mt-1">Yes — COLAs accrue on your benefit formula even before you claim, so delaying to 70 stacks delayed credits on top of every intervening COLA. Waiting never forfeits inflation adjustments.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Will the earnings test reduce my lifetime benefit?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Will the earnings test reduce my lifetime benefit?</summary>
               <p className="mt-1">No — withheld amounts are recalculated into higher monthly benefits at FRA. The test shifts timing; only earned income above the exempt amount in pre-FRA years triggers withholding.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does everyone get the same COLA dollars?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does everyone get the same COLA dollars?</summary>
               <p className="mt-1">Same percentage, different dollars — 2.8% of a $3,000 check is $84; of a $1,200 check, $33.60. Lower earners feel inflation most while gaining the fewest COLA dollars.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -166,6 +175,22 @@ export default function ColaPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "COLA & Social Security 2026: 2.8% Raise Guide | LoanPay Retire", description: "2026 Social Security COLA is 2.8%: new average checks, earnings-test limits, $184,500 wage base, Medicare interplay, and tax effects.", url: "https://retire.loanpaylogic.com/cola-social-security-2026" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"When does the 2026 COLA hit my check?","answer":"January 2026 for Social Security (paid in January); SSI payments reflect it in late December 2025. Notices arrive by mail and in my Social Security accounts in December."},{"question":"Does the COLA apply if I delay to 70?","answer":"Yes — COLAs accrue on your benefit formula even before you claim, so delaying to 70 stacks delayed credits on top of every intervening COLA. Waiting never forfeits inflation adjustments."},{"question":"Will the earnings test reduce my lifetime benefit?","answer":"No — withheld amounts are recalculated into higher monthly benefits at FRA. The test shifts timing; only earned income above the exempt amount in pre-FRA years triggers withholding."},{"question":"Does everyone get the same COLA dollars?","answer":"Same percentage, different dollars — 2.8% of a $3,000 check is $84; of a $1,200 check, $33.60. Lower earners feel inflation most while gaining the fewest COLA dollars."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "COLA & Social Security 2026: 2.8% Raise Guide | LoanPay Retire", url: "https://retire.loanpaylogic.com/cola-social-security-2026" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

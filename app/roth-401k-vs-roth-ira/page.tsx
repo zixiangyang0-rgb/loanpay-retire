@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Roth 401(k) vs. Roth IRA: Key Differences 2026 | LoanPay Retire",
@@ -35,6 +37,10 @@ export default function Roth401kVsRothIraPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -45,6 +51,7 @@ export default function Roth401kVsRothIraPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Side-by-side for 2026</h2>
@@ -133,25 +140,27 @@ export default function Roth401kVsRothIraPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I max both in the same year?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I max both in the same year?</summary>
               <p className="mt-1">Yes — the caps are independent. In 2026 you may put $24,500 in a Roth 401(k) and $7,500 in a Roth IRA ($32,000 total, plus catch-ups and matches) if income and cash flow allow.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do Roth 401(k)s have RMDs?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do Roth 401(k)s have RMDs?</summary>
               <p className="mt-1">No longer for the original owner — SECURE 2.0 ended lifetime Roth 401(k) RMDs starting in 2024. Beneficiaries who inherit either account still face payout rules.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Which has better creditor protection?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Which has better creditor protection?</summary>
               <p className="mt-1">401(k)s carry strong federal ERISA anti-alienation protection; IRAs rely on state law plus up to about $1.5M+ in federal bankruptcy exemption (indexed). Neither shields fraud or federal tax liens.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I borrow from either?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I borrow from either?</summary>
               <p className="mt-1">Many 401(k)s allow loans up to $50,000 or 50% vested (repaid with interest to yourself, but double-taxed interest and separation risk apply). IRAs never allow loans — any &ldquo;borrowing&rdquo; is a distribution.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -166,6 +175,22 @@ export default function Roth401kVsRothIraPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Roth 401(k) vs. Roth IRA: Key Differences 2026 | LoanPay Retire", description: "Roth 401(k) vs. Roth IRA in 2026: contribution caps, income rules, RMDs, loans, fees, and how to use both accounts together.", url: "https://retire.loanpaylogic.com/roth-401k-vs-roth-ira" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Can I max both in the same year?","answer":"Yes — the caps are independent. In 2026 you may put $24,500 in a Roth 401(k) and $7,500 in a Roth IRA ($32,000 total, plus catch-ups and matches) if income and cash flow allow."},{"question":"Do Roth 401(k)s have RMDs?","answer":"No longer for the original owner — SECURE 2.0 ended lifetime Roth 401(k) RMDs starting in 2024. Beneficiaries who inherit either account still face payout rules."},{"question":"Which has better creditor protection?","answer":"401(k)s carry strong federal ERISA anti-alienation protection; IRAs rely on state law plus up to about $1.5M+ in federal bankruptcy exemption (indexed). Neither shields fraud or federal tax liens."},{"question":"Can I borrow from either?","answer":"Many 401(k)s allow loans up to $50,000 or 50% vested (repaid with interest to yourself, but double-taxed interest and separation risk apply). IRAs never allow loans — any \"borrowing\" is a distribution."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Roth 401(k) vs. Roth IRA: Key Differences 2026 | LoanPay Retire", url: "https://retire.loanpaylogic.com/roth-401k-vs-roth-ira" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

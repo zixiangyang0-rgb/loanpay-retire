@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Beneficiaries & Estate Basics for Retirees | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function EstatePage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function EstatePage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Forms beat wills: the hierarchy</h2>
@@ -135,25 +142,27 @@ export default function EstatePage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do spouses get special inherited-IRA rules?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do spouses get special inherited-IRA rules?</summary>
               <p className="mt-1">Yes — spouses may roll inherited IRAs into their own, treat them as their own, or take life-expectancy distributions, preserving spousal Roth conversions and delay strategies no other heir enjoys.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What is per stirpes vs. per capita?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What is per stirpes vs. per capita?</summary>
               <p className="mt-1">Per stirpes passes a deceased beneficiary&apos;s share down their branch (to their kids). Per capita splits everything among surviving named individuals. Default rules vary by custodian — write your choice explicitly.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should I name a trust as IRA beneficiary?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should I name a trust as IRA beneficiary?</summary>
               <p className="mt-1">Sometimes — for minors, spendthrifts, or special-needs heirs — but trusts must be drafted as see-through conduits or accumulation trusts with careful tax analysis. Bad trust drafting accelerates taxes; get specialist counsel.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">How often should I review everything?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">How often should I review everything?</summary>
               <p className="mt-1">Every 2–3 years plus after marriage, divorce, births, deaths, job changes, moves, and large balance shifts. Calendar it with your RMD review each December.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -168,6 +177,22 @@ export default function EstatePage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Beneficiaries & Estate Basics for Retirees | LoanPay Retire", description: "Beneficiary designations beat wills: per stirpes vs. per capita, the 10-year inherited IRA rule, TOD deeds, trusts, and review triggers.", url: "https://retire.loanpaylogic.com/beneficiaries-estate-basics" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Do spouses get special inherited-IRA rules?","answer":"Yes — spouses may roll inherited IRAs into their own, treat them as their own, or take life-expectancy distributions, preserving spousal Roth conversions and delay strategies no other heir enjoys."},{"question":"What is per stirpes vs. per capita?","answer":"Per stirpes passes a deceased beneficiary's share down their branch (to their kids). Per capita splits everything among surviving named individuals. Default rules vary by custodian — write your choice explicitly."},{"question":"Should I name a trust as IRA beneficiary?","answer":"Sometimes — for minors, spendthrifts, or special-needs heirs — but trusts must be drafted as see-through conduits or accumulation trusts with careful tax analysis. Bad trust drafting accelerates taxes; get specialist counsel."},{"question":"How often should I review everything?","answer":"Every 2–3 years plus after marriage, divorce, births, deaths, job changes, moves, and large balance shifts. Calendar it with your RMD review each December."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Beneficiaries & Estate Basics for Retirees | LoanPay Retire", url: "https://retire.loanpaylogic.com/beneficiaries-estate-basics" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

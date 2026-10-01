@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Target-Date Funds Explained: Glide Paths & Fees | LoanPay Retire",
@@ -35,6 +37,10 @@ export default function TdfPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -45,6 +51,7 @@ export default function TdfPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">How the glide path flies</h2>
@@ -126,25 +133,27 @@ export default function TdfPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Which target year should I pick?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Which target year should I pick?</summary>
               <p className="mt-1">Roughly the year you turn 65 — a 1990 birth retiring ~2055 fits a 2055 or 2060 fund. Adjust later/earlier if you plan to retire notably early or late, not by market views.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Are target-date funds safe near retirement?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Are target-date funds safe near retirement?</summary>
               <p className="mt-1">Safer, not safe: 2010 funds fell ~25% in 2008, and 2020 funds fell ~10–14% in early 2020. They cushion crashes relative to all-stock portfolios; they do not prevent losses.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Index or active target-date funds?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Index or active target-date funds?</summary>
               <p className="mt-1">Index TDFs (0.05–0.15%) dominate on cost and match or beat most active peers net of fees. Active TDFs must overcome ~0.50%+ annual drag every single year — a persistent headwind.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should I hold a TDF in a taxable account?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should I hold a TDF in a taxable account?</summary>
               <p className="mt-1">Preferably not — bond income and rebalancing distributions are taxed yearly. Shelter TDFs in 401(k)s and IRAs; use total-market index ETFs in taxable accounts.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -159,6 +168,22 @@ export default function TdfPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Target-Date Funds Explained: Glide Paths & Fees | LoanPay Retire", description: "Target-date funds: how glide paths work, to-vs-through designs, fees that matter, and when the default 401(k) fund isn't enough.", url: "https://retire.loanpaylogic.com/target-date-funds-explained" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Which target year should I pick?","answer":"Roughly the year you turn 65 — a 1990 birth retiring ~2055 fits a 2055 or 2060 fund. Adjust later/earlier if you plan to retire notably early or late, not by market views."},{"question":"Are target-date funds safe near retirement?","answer":"Safer, not safe: 2010 funds fell ~25% in 2008, and 2020 funds fell ~10–14% in early 2020. They cushion crashes relative to all-stock portfolios; they do not prevent losses."},{"question":"Index or active target-date funds?","answer":"Index TDFs (0.05–0.15%) dominate on cost and match or beat most active peers net of fees. Active TDFs must overcome ~0.50%+ annual drag every single year — a persistent headwind."},{"question":"Should I hold a TDF in a taxable account?","answer":"Preferably not — bond income and rebalancing distributions are taxed yearly. Shelter TDFs in 401(k)s and IRAs; use total-market index ETFs in taxable accounts."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Target-Date Funds Explained: Glide Paths & Fees | LoanPay Retire", url: "https://retire.loanpaylogic.com/target-date-funds-explained" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

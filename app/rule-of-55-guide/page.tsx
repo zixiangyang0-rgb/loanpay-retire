@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Rule of 55 Guide: Penalty-Free 401(k) at 55 | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function Rule55Page() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function Rule55Page() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Exactly what the rule covers</h2>
@@ -135,25 +142,27 @@ export default function Rule55Page() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does getting fired count?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does getting fired count?</summary>
               <p className="mt-1">Yes — any separation (quit, layoff, firing, early-retirement offer) in the qualifying year works. The reason for leaving is irrelevant; the timing and the account are everything.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I use an old 401(k) from a prior job?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I use an old 401(k) from a prior job?</summary>
               <p className="mt-1">No — only the plan of the employer you separated from at 55+. Roll old balances into the current plan before separating if its rules and fees make that wise.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What about public-safety workers?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What about public-safety workers?</summary>
               <p className="mt-1">Federal/state/local police, firefighters, EMS, and corrections staff qualify from 50 (25 years of service extends options further) under special provisions — confirm with your plan administrator.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Is there withholding on Rule-of-55 withdrawals?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Is there withholding on Rule-of-55 withdrawals?</summary>
               <p className="mt-1">Yes — eligible rollover-style distributions face 20% mandatory federal withholding (adjustable via W-4R for nonperiodic payments). You still owe the full ordinary tax at filing.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -168,6 +177,22 @@ export default function Rule55Page() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Rule of 55 Guide: Penalty-Free 401(k) at 55 | LoanPay Retire", description: "Rule of 55: leave your job at 55+ and tap that employer's 401(k) penalty-free — eligibility, partial withdrawals, and IRA-rollover traps.", url: "https://retire.loanpaylogic.com/rule-of-55-guide" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Does getting fired count?","answer":"Yes — any separation (quit, layoff, firing, early-retirement offer) in the qualifying year works. The reason for leaving is irrelevant; the timing and the account are everything."},{"question":"Can I use an old 401(k) from a prior job?","answer":"No — only the plan of the employer you separated from at 55+. Roll old balances into the current plan before separating if its rules and fees make that wise."},{"question":"What about public-safety workers?","answer":"Federal/state/local police, firefighters, EMS, and corrections staff qualify from 50 (25 years of service extends options further) under special provisions — confirm with your plan administrator."},{"question":"Is there withholding on Rule-of-55 withdrawals?","answer":"Yes — eligible rollover-style distributions face 20% mandatory federal withholding (adjustable via W-4R for nonperiodic payments). You still owe the full ordinary tax at filing."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Rule of 55 Guide: Penalty-Free 401(k) at 55 | LoanPay Retire", url: "https://retire.loanpaylogic.com/rule-of-55-guide" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

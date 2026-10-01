@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Healthcare Costs in Retirement: 2026 Planning | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function HealthCostsPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function HealthCostsPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Where the $300,000+ goes</h2>
@@ -131,25 +138,27 @@ export default function HealthCostsPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does Medicare cover long-term care?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does Medicare cover long-term care?</summary>
               <p className="mt-1">Only briefly — up to 100 days of skilled nursing after a 3-day hospital stay, with copays from day 21. Custodial nursing-home or home-aide care for daily living is excluded.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">How do I cover health insurance before 65?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">How do I cover health insurance before 65?</summary>
               <p className="mt-1">ACA marketplace plans (subsidies key off MAGI — Roth ladders and low-income years help), COBRA for 18 months (expensive, full premium + 2%), or a working spouse&apos;s plan.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Are HSAs really better than 401(k)s for medical costs?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Are HSAs really better than 401(k)s for medical costs?</summary>
               <p className="mt-1">For earmarked medical dollars, yes — deductible in, tax-free out beats any 401(k) path. Fund the 401(k) match first, then the HSA, then max the 401(k).</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should I buy Medigap or Medicare Advantage?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should I buy Medigap or Medicare Advantage?</summary>
               <p className="mt-1">Medigap costs more monthly but offers nationwide, predictable coverage — best for travelers and the chronically ill. Advantage plans bundle extras cheaply but constrain networks. Compare during open enrollment yearly.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -164,6 +173,22 @@ export default function HealthCostsPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Healthcare Costs in Retirement: 2026 Planning | LoanPay Retire", description: "Budget health costs in retirement: lifetime estimates, Medicare gaps, dental/vision, long-term care odds, and HSA funding.", url: "https://retire.loanpaylogic.com/healthcare-costs-in-retirement" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Does Medicare cover long-term care?","answer":"Only briefly — up to 100 days of skilled nursing after a 3-day hospital stay, with copays from day 21. Custodial nursing-home or home-aide care for daily living is excluded."},{"question":"How do I cover health insurance before 65?","answer":"ACA marketplace plans (subsidies key off MAGI — Roth ladders and low-income years help), COBRA for 18 months (expensive, full premium + 2%), or a working spouse's plan."},{"question":"Are HSAs really better than 401(k)s for medical costs?","answer":"For earmarked medical dollars, yes — deductible in, tax-free out beats any 401(k) path. Fund the 401(k) match first, then the HSA, then max the 401(k)."},{"question":"Should I buy Medigap or Medicare Advantage?","answer":"Medigap costs more monthly but offers nationwide, predictable coverage — best for travelers and the chronically ill. Advantage plans bundle extras cheaply but constrain networks. Compare during open enrollment yearly."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Healthcare Costs in Retirement: 2026 Planning | LoanPay Retire", url: "https://retire.loanpaylogic.com/healthcare-costs-in-retirement" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

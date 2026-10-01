@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Catch-Up Contributions After 50 (2026 Rules) | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function CatchUpPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function CatchUpPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Every catch-up amount for 2026</h2>
@@ -127,25 +134,27 @@ export default function CatchUpPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">I turn 50 in December 2026 — do I qualify?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">I turn 50 in December 2026 — do I qualify?</summary>
               <p className="mt-1">Yes. Eligibility keys off attaining the age any time during the calendar year, so December birthdays get the full $8,000 (or $1,100 IRA) slot for all of 2026.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does the $11,250 stack with the $8,000?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does the $11,250 stack with the $8,000?</summary>
               <p className="mt-1">No — at 60–63 you get the higher $11,250 instead of the $8,000. Your 2026 employee ceiling is $35,750, not $43,750.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can my employer match catch-ups?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can my employer match catch-ups?</summary>
               <p className="mt-1">Matching formulas generally apply to all deferrals including catch-ups, subject to the $72,000–$83,250 total ceilings and the plan&apos;s own match cap. Check your summary plan description.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What about HSA catch-ups?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What about HSA catch-ups?</summary>
               <p className="mt-1">HSAs keep a separate $1,000 catch-up at 55+ (not 50+), per account holder — a 60-year-old couple with family coverage can add $2,000 total. See our HSA strategy guide.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -160,6 +169,22 @@ export default function CatchUpPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Catch-Up Contributions After 50 (2026 Rules) | LoanPay Retire", description: "2026 catch-up rules: $8,000 at 50+, $11,250 super catch-up at 60–63, $1,100 IRA catch-up, Roth mandates, and how to use them.", url: "https://retire.loanpaylogic.com/catch-up-contributions-after-50" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"I turn 50 in December 2026 — do I qualify?","answer":"Yes. Eligibility keys off attaining the age any time during the calendar year, so December birthdays get the full $8,000 (or $1,100 IRA) slot for all of 2026."},{"question":"Does the $11,250 stack with the $8,000?","answer":"No — at 60–63 you get the higher $11,250 instead of the $8,000. Your 2026 employee ceiling is $35,750, not $43,750."},{"question":"Can my employer match catch-ups?","answer":"Matching formulas generally apply to all deferrals including catch-ups, subject to the $72,000–$83,250 total ceilings and the plan's own match cap. Check your summary plan description."},{"question":"What about HSA catch-ups?","answer":"HSAs keep a separate $1,000 catch-up at 55+ (not 50+), per account holder — a 60-year-old couple with family coverage can add $2,000 total. See our HSA strategy guide."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Catch-Up Contributions After 50 (2026 Rules) | LoanPay Retire", url: "https://retire.loanpaylogic.com/catch-up-contributions-after-50" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

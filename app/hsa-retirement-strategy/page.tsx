@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "HSA Retirement Strategy: Triple Tax Power | LoanPay Retire",
@@ -35,6 +37,10 @@ export default function HsaPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -45,6 +51,7 @@ export default function HsaPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Why the HSA beats both IRA flavors</h2>
@@ -130,25 +137,27 @@ export default function HsaPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I invest my HSA?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I invest my HSA?</summary>
               <p className="mt-1">Yes — most custodians offer mutual funds and ETFs once you pass a $1,000–$2,000 cash threshold. An HSA left in cash for decades forfeits the strategy&apos;s compounding engine.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What counts as a qualified expense?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What counts as a qualified expense?</summary>
               <p className="mt-1">Deductibles, copays, dental, vision, prescriptions, and (after 65) Medicare premiums except Medigap. Cosmetic procedures, general toiletries, and most supplements do not qualify — see IRS Publication 502.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Is there a reimbursement deadline?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Is there a reimbursement deadline?</summary>
               <p className="mt-1">None under current rules — a 2026 expense may be reimbursed tax-free in 2056 if you keep proof and the HSA existed when the expense occurred. Legislation could change this, so digitize receipts now.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What happens to my HSA at death?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What happens to my HSA at death?</summary>
               <p className="mt-1">A spouse beneficiary inherits it as their own HSA (tax-free). Non-spouse beneficiaries receive it as taxable income in one year — spend or convert strategically late in life.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -163,6 +172,22 @@ export default function HsaPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "HSA Retirement Strategy: Triple Tax Power | LoanPay Retire", description: "Use an HSA for retirement: 2026 limits ($4,400/$8,750), investing the balance, the shoebox receipt method, and Medicare coordination.", url: "https://retire.loanpaylogic.com/hsa-retirement-strategy" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Can I invest my HSA?","answer":"Yes — most custodians offer mutual funds and ETFs once you pass a $1,000–$2,000 cash threshold. An HSA left in cash for decades forfeits the strategy's compounding engine."},{"question":"What counts as a qualified expense?","answer":"Deductibles, copays, dental, vision, prescriptions, and (after 65) Medicare premiums except Medigap. Cosmetic procedures, general toiletries, and most supplements do not qualify — see IRS Publication 502."},{"question":"Is there a reimbursement deadline?","answer":"None under current rules — a 2026 expense may be reimbursed tax-free in 2056 if you keep proof and the HSA existed when the expense occurred. Legislation could change this, so digitize receipts now."},{"question":"What happens to my HSA at death?","answer":"A spouse beneficiary inherits it as their own HSA (tax-free). Non-spouse beneficiaries receive it as taxable income in one year — spend or convert strategically late in life."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "HSA Retirement Strategy: Triple Tax Power | LoanPay Retire", url: "https://retire.loanpaylogic.com/hsa-retirement-strategy" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

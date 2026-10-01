@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "The 4% Rule Explained (and Its Limits) | LoanPay Retire",
@@ -35,6 +37,10 @@ export default function FourPercentPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -45,6 +51,7 @@ export default function FourPercentPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">What Bengen actually found</h2>
@@ -131,25 +138,27 @@ export default function FourPercentPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does 4% include fees and taxes?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does 4% include fees and taxes?</summary>
               <p className="mt-1">No — Bengen&apos;s 4% is gross portfolio withdrawal. A 1% advisory fee plus taxes means only ~2.5–3% reaches your checking account. Budget fees and taxes inside the 4%, not on top.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What asset mix does 4% assume?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What asset mix does 4% assume?</summary>
               <p className="mt-1">Roughly 50–75% stocks. Very conservative portfolios (mostly bonds/cash) historically failed 4% more often — growth assets fund multi-decade inflation adjustments.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should early retirees use 4%?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should early retirees use 4%?</summary>
               <p className="mt-1">Cautiously — 40–50 year horizons historically needed ~3.25–3.5% rigid, or 4%+ with guardrail flexibility and part-time income. Healthcare before Medicare at 65 is a separate budget line.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">How often should I revisit my rate?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">How often should I revisit my rate?</summary>
               <p className="mt-1">Annually or after ±20% portfolio moves. Ratchet up after strong years, trim after poor ones, and recheck taxes, RMDs, and IRMAA each December.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -164,6 +173,22 @@ export default function FourPercentPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "The 4% Rule Explained (and Its Limits) | LoanPay Retire", description: "The 4% rule: Bengen's research, inflation adjustments, sequence risk, fees, longevity, and flexible alternatives like guardrails.", url: "https://retire.loanpaylogic.com/4-percent-rule-explained" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Does 4% include fees and taxes?","answer":"No — Bengen's 4% is gross portfolio withdrawal. A 1% advisory fee plus taxes means only ~2.5–3% reaches your checking account. Budget fees and taxes inside the 4%, not on top."},{"question":"What asset mix does 4% assume?","answer":"Roughly 50–75% stocks. Very conservative portfolios (mostly bonds/cash) historically failed 4% more often — growth assets fund multi-decade inflation adjustments."},{"question":"Should early retirees use 4%?","answer":"Cautiously — 40–50 year horizons historically needed ~3.25–3.5% rigid, or 4%+ with guardrail flexibility and part-time income. Healthcare before Medicare at 65 is a separate budget line."},{"question":"How often should I revisit my rate?","answer":"Annually or after ±20% portfolio moves. Ratchet up after strong years, trim after poor ones, and recheck taxes, RMDs, and IRMAA each December."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "The 4% Rule Explained (and Its Limits) | LoanPay Retire", url: "https://retire.loanpaylogic.com/4-percent-rule-explained" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

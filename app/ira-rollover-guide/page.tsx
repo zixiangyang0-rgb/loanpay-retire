@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "IRA Rollover Guide: Direct vs. Indirect | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function RolloverPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function RolloverPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Direct vs. indirect: one clear winner</h2>
@@ -134,25 +141,27 @@ export default function RolloverPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should I roll over or leave my old 401(k)?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should I roll over or leave my old 401(k)?</summary>
               <p className="mt-1">Leave it if fees are low, you want Rule-of-55 access, or you need pro-rata cleanliness for backdoors. Roll it for consolidation, better funds, or an IRA-based Roth conversion ladder.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Are Roth conversions during rollover taxed?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Are Roth conversions during rollover taxed?</summary>
               <p className="mt-1">Rolling traditional 401(k) to traditional IRA is tax-free; converting either to Roth triggers ordinary income tax on the pre-tax amount. Split the steps — roll first, convert deliberately later.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What is the once-per-year rule?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What is the once-per-year rule?</summary>
               <p className="mt-1">You may complete only one indirect IRA-to-IRA 60-day rollover per 12-month period across all IRAs. Direct trustee transfers and 401(k)-to-IRA rollovers are exempt — another reason to go direct.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do RMDs affect rollovers?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do RMDs affect rollovers?</summary>
               <p className="mt-1">Yes — any RMD due for the year must be distributed first and cannot be rolled over. Only amounts above the RMD are rollover-eligible.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -168,6 +177,22 @@ export default function RolloverPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "IRA Rollover Guide: Direct vs. Indirect | LoanPay Retire", description: "Roll over a 401(k) to an IRA without taxes or penalties: direct vs. indirect rules, the 60-day clock, withholding, pro-rata and NUA traps.", url: "https://retire.loanpaylogic.com/ira-rollover-guide" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Should I roll over or leave my old 401(k)?","answer":"Leave it if fees are low, you want Rule-of-55 access, or you need pro-rata cleanliness for backdoors. Roll it for consolidation, better funds, or an IRA-based Roth conversion ladder."},{"question":"Are Roth conversions during rollover taxed?","answer":"Rolling traditional 401(k) to traditional IRA is tax-free; converting either to Roth triggers ordinary income tax on the pre-tax amount. Split the steps — roll first, convert deliberately later."},{"question":"What is the once-per-year rule?","answer":"You may complete only one indirect IRA-to-IRA 60-day rollover per 12-month period across all IRAs. Direct trustee transfers and 401(k)-to-IRA rollovers are exempt — another reason to go direct."},{"question":"Do RMDs affect rollovers?","answer":"Yes — any RMD due for the year must be distributed first and cannot be rolled over. Only amounts above the RMD are rollover-eligible."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "IRA Rollover Guide: Direct vs. Indirect | LoanPay Retire", url: "https://retire.loanpaylogic.com/ira-rollover-guide" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

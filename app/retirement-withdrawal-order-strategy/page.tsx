@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Retirement Withdrawal Order Strategy | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function WithdrawalOrderPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function WithdrawalOrderPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">The conventional order and its logic</h2>
@@ -136,25 +143,27 @@ export default function WithdrawalOrderPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should Roth really go last?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should Roth really go last?</summary>
               <p className="mt-1">Usually — but not for bracket management. Spending some Roth early to avoid the 22%+ brackets, IRMAA cliffs, or Social Security taxation often beats hoarding it while paying high rates on traditional dollars.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">How do RMDs fit the sequence?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">How do RMDs fit the sequence?</summary>
               <p className="mt-1">RMDs are mandatory traditional withdrawals that override any plan — take them first each year (they cannot be converted), then layer voluntary withdrawals and conversions around them.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What about HSA dollars?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What about HSA dollars?</summary>
               <p className="mt-1">Spend HSA dollars on medical costs (including Medicare premiums) tax-free alongside Roth for lifestyle costs — see our HSA strategy guide. Non-medical HSA withdrawals after 65 work like traditional dollars.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does the surviving spouse change the order?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does the surviving spouse change the order?</summary>
               <p className="mt-1">Yes — single-filer brackets are half as wide, so the survivor often faces higher rates on the same RMDs. Accelerating traditional withdrawals and conversions while both spouses are alive is classic survivor-aware planning.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -169,6 +178,22 @@ export default function WithdrawalOrderPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Retirement Withdrawal Order Strategy | LoanPay Retire", description: "Tax-smart withdrawal sequencing: taxable, traditional, Roth — proportional vs. sequential methods, Social Security and IRMAA coordination.", url: "https://retire.loanpaylogic.com/retirement-withdrawal-order-strategy" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Should Roth really go last?","answer":"Usually — but not for bracket management. Spending some Roth early to avoid the 22%+ brackets, IRMAA cliffs, or Social Security taxation often beats hoarding it while paying high rates on traditional dollars."},{"question":"How do RMDs fit the sequence?","answer":"RMDs are mandatory traditional withdrawals that override any plan — take them first each year (they cannot be converted), then layer voluntary withdrawals and conversions around them."},{"question":"What about HSA dollars?","answer":"Spend HSA dollars on medical costs (including Medicare premiums) tax-free alongside Roth for lifestyle costs — see our HSA strategy guide. Non-medical HSA withdrawals after 65 work like traditional dollars."},{"question":"Does the surviving spouse change the order?","answer":"Yes — single-filer brackets are half as wide, so the survivor often faces higher rates on the same RMDs. Accelerating traditional withdrawals and conversions while both spouses are alive is classic survivor-aware planning."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Retirement Withdrawal Order Strategy | LoanPay Retire", url: "https://retire.loanpaylogic.com/retirement-withdrawal-order-strategy" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

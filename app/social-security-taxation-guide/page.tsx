@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Social Security Taxation Guide: 0%, 50%, 85% | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function SSTaxPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function SSTaxPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Provisional income: the only formula that matters</h2>
@@ -134,25 +141,27 @@ export default function SSTaxPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Is the 85% a tax rate?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Is the 85% a tax rate?</summary>
               <p className="mt-1">No — it is the share of benefits added to taxable income. That slice is then taxed at your ordinary marginal rate (10–37%), so the effective bite on benefits is always well under 85%.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do Roth conversions raise benefit taxes?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do Roth conversions raise benefit taxes?</summary>
               <p className="mt-1">In the conversion year, yes — converted dollars lift AGI and provisional income. The payoff is smaller RMDs later, which can permanently drop you a tier. Model multi-year, not single-year.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Are lump-sum back payments taxed punitively?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Are lump-sum back payments taxed punitively?</summary>
               <p className="mt-1">You may elect to attribute a lump sum to the earlier years it covers (the Social Security lump-sum election), often cutting the tax versus recognizing it all at once. The SSA notice explains the worksheet.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does working in retirement change benefit taxation?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does working in retirement change benefit taxation?</summary>
               <p className="mt-1">Wages raise provisional income directly, so part-time work can tip benefits into taxable tiers — coordinate earnings with the earnings test and your claiming age.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -167,6 +176,22 @@ export default function SSTaxPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Social Security Taxation Guide: 0%, 50%, 85% | LoanPay Retire", description: "How Social Security is taxed: provisional-income tiers, the 0/50/85% inclusion rules, state treatment, and strategies to pay less.", url: "https://retire.loanpaylogic.com/social-security-taxation-guide" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Is the 85% a tax rate?","answer":"No — it is the share of benefits added to taxable income. That slice is then taxed at your ordinary marginal rate (10–37%), so the effective bite on benefits is always well under 85%."},{"question":"Do Roth conversions raise benefit taxes?","answer":"In the conversion year, yes — converted dollars lift AGI and provisional income. The payoff is smaller RMDs later, which can permanently drop you a tier. Model multi-year, not single-year."},{"question":"Are lump-sum back payments taxed punitively?","answer":"You may elect to attribute a lump sum to the earlier years it covers (the Social Security lump-sum election), often cutting the tax versus recognizing it all at once. The SSA notice explains the worksheet."},{"question":"Does working in retirement change benefit taxation?","answer":"Wages raise provisional income directly, so part-time work can tip benefits into taxable tiers — coordinate earnings with the earnings test and your claiming age."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Social Security Taxation Guide: 0%, 50%, 85% | LoanPay Retire", url: "https://retire.loanpaylogic.com/social-security-taxation-guide" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

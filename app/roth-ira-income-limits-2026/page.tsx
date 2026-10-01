@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Roth IRA Income Limits 2026 | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function RothIraLimitsPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function RothIraLimitsPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">The 2026 phase-out bands</h2>
@@ -127,25 +134,27 @@ export default function RothIraLimitsPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does the $7,500 cap split across accounts?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does the $7,500 cap split across accounts?</summary>
               <p className="mt-1">Yes — $7,500 ($8,600 at 50+) is your combined ceiling across Roth, traditional, SEP, and SIMPLE contributions as an individual. Split it however you like, but never exceed it in total.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What counts as compensation?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What counts as compensation?</summary>
               <p className="mt-1">Wages, salaries, commissions, and self-employment income count. Pensions, Social Security, rental income, interest, and dividends do not — a pure retiree generally cannot contribute.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can teens or students contribute?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can teens or students contribute?</summary>
               <p className="mt-1">Yes, with earned income — a teenager with $4,000 of summer wages may contribute $4,000 to a Roth, a superb multi-decade head start. Custodial Roth IRAs handle the paperwork.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What if my income lands inside the band?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What if my income lands inside the band?</summary>
               <p className="mt-1">Compute the prorated direct amount with the IRS worksheet, contribute exactly that to Roth, and route the remainder through the backdoor — never round up and risk the 6% excess tax.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -160,6 +169,22 @@ export default function RothIraLimitsPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Roth IRA Income Limits 2026 | LoanPay Retire", description: "2026 Roth IRA limits: $7,500 ($8,600 at 50+), phase-outs $153K–$168K single and $242K–$252K joint, plus backdoor and spousal strategies.", url: "https://retire.loanpaylogic.com/roth-ira-income-limits-2026" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Does the $7,500 cap split across accounts?","answer":"Yes — $7,500 ($8,600 at 50+) is your combined ceiling across Roth, traditional, SEP, and SIMPLE contributions as an individual. Split it however you like, but never exceed it in total."},{"question":"What counts as compensation?","answer":"Wages, salaries, commissions, and self-employment income count. Pensions, Social Security, rental income, interest, and dividends do not — a pure retiree generally cannot contribute."},{"question":"Can teens or students contribute?","answer":"Yes, with earned income — a teenager with $4,000 of summer wages may contribute $4,000 to a Roth, a superb multi-decade head start. Custodial Roth IRAs handle the paperwork."},{"question":"What if my income lands inside the band?","answer":"Compute the prorated direct amount with the IRS worksheet, contribute exactly that to Roth, and route the remainder through the backdoor — never round up and risk the 6% excess tax."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Roth IRA Income Limits 2026 | LoanPay Retire", url: "https://retire.loanpaylogic.com/roth-ira-income-limits-2026" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

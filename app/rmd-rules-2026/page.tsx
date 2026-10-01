@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "RMD Rules 2026: Ages, Deadlines & Penalties | LoanPay Retire",
@@ -35,6 +37,10 @@ export default function RmdRulesPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -45,6 +51,7 @@ export default function RmdRulesPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Who owes an RMD in 2026</h2>
@@ -131,25 +138,27 @@ export default function RmdRulesPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I take more than the RMD?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I take more than the RMD?</summary>
               <p className="mt-1">Yes — the RMD is a floor, not a ceiling. Extra withdrawals are simply taxed as ordinary income (plus possible IRMAA and Social Security-tax effects).</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do RMDs apply to Roth 401(k)s?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do RMDs apply to Roth 401(k)s?</summary>
               <p className="mt-1">No longer during your lifetime — SECURE 2.0 removed them from 2024 onward. Many owners stopped rolling Roth 401(k)s into Roth IRAs solely to dodge RMDs.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What if I inherit an IRA in 2026?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What if I inherit an IRA in 2026?</summary>
               <p className="mt-1">Most non-spouse beneficiaries face the 10-year rule: empty the account by end of year 10, with annual RMDs in years 1–9 if the deceased had started them. Spouses keep special rollover and life-expectancy options.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can charity satisfy my RMD?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can charity satisfy my RMD?</summary>
               <p className="mt-1">Yes — qualified charitable distributions up to $108,000 (2025; indexed) per person go directly to charity, count toward the RMD, and never enter AGI. You must be 70½+.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -164,6 +173,22 @@ export default function RmdRulesPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "RMD Rules 2026: Ages, Deadlines & Penalties | LoanPay Retire", description: "2026 RMD rules: age 73 vs. 75 under SECURE 2.0, April 1 deadlines, Uniform Lifetime Table math, inherited IRA 10-year rule, and the 25% penalty.", url: "https://retire.loanpaylogic.com/rmd-rules-2026" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Can I take more than the RMD?","answer":"Yes — the RMD is a floor, not a ceiling. Extra withdrawals are simply taxed as ordinary income (plus possible IRMAA and Social Security-tax effects)."},{"question":"Do RMDs apply to Roth 401(k)s?","answer":"No longer during your lifetime — SECURE 2.0 removed them from 2024 onward. Many owners stopped rolling Roth 401(k)s into Roth IRAs solely to dodge RMDs."},{"question":"What if I inherit an IRA in 2026?","answer":"Most non-spouse beneficiaries face the 10-year rule: empty the account by end of year 10, with annual RMDs in years 1–9 if the deceased had started them. Spouses keep special rollover and life-expectancy options."},{"question":"Can charity satisfy my RMD?","answer":"Yes — qualified charitable distributions up to $108,000 (2025; indexed) per person go directly to charity, count toward the RMD, and never enter AGI. You must be 70½+."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "RMD Rules 2026: Ages, Deadlines & Penalties | LoanPay Retire", url: "https://retire.loanpaylogic.com/rmd-rules-2026" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

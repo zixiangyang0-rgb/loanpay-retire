@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "How Much Do I Need to Retire? 2026 Guide | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function HowMuchPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function HowMuchPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Step 1–3: spending, gap, multiple</h2>
@@ -137,25 +144,27 @@ export default function HowMuchPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Is $1 million enough?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Is $1 million enough?</summary>
               <p className="mt-1">It depends entirely on the gap: $1M supports about $40,000 yearly at 4%. With $30,000 of Social Security that funds a $70,000 lifestyle — plenty in low-cost areas, tight on the coasts with a mortgage.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should I include home equity?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should I include home equity?</summary>
               <p className="mt-1">Only with a concrete plan — downsizing, relocating, or a reverse mortgage strategy. Equity you intend to live in is shelter, not spending money.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What savings rate gets me there?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What savings rate gets me there?</summary>
               <p className="mt-1">Starting at 25, roughly 15% of pay (including matches) funds a 67 retirement at 75% replacement under median assumptions. Starting at 40, expect 25–30%. Catch-ups after 50 help — see our catch-up guide.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">How does retiring early change the math?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">How does retiring early change the math?</summary>
               <p className="mt-1">Each early year both removes a saving year and adds a spending year — often 33x–40x multiples instead of 25x, plus bridge health insurance before Medicare at 65.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -170,6 +179,22 @@ export default function HowMuchPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "How Much Do I Need to Retire? 2026 Guide | LoanPay Retire", description: "Retirement savings targets: replacement ratios, the 25x rule, Social Security offsets, and a worked example for a $100K earner.", url: "https://retire.loanpaylogic.com/how-much-do-i-need-to-retire" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Is $1 million enough?","answer":"It depends entirely on the gap: $1M supports about $40,000 yearly at 4%. With $30,000 of Social Security that funds a $70,000 lifestyle — plenty in low-cost areas, tight on the coasts with a mortgage."},{"question":"Should I include home equity?","answer":"Only with a concrete plan — downsizing, relocating, or a reverse mortgage strategy. Equity you intend to live in is shelter, not spending money."},{"question":"What savings rate gets me there?","answer":"Starting at 25, roughly 15% of pay (including matches) funds a 67 retirement at 75% replacement under median assumptions. Starting at 40, expect 25–30%. Catch-ups after 50 help — see our catch-up guide."},{"question":"How does retiring early change the math?","answer":"Each early year both removes a saving year and adds a spending year — often 33x–40x multiples instead of 25x, plus bridge health insurance before Medicare at 65."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "How Much Do I Need to Retire? 2026 Guide | LoanPay Retire", url: "https://retire.loanpaylogic.com/how-much-do-i-need-to-retire" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

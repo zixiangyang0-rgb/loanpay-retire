@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "Pension vs. Lump Sum: Which to Take | LoanPay Retire",
@@ -35,6 +37,10 @@ export default function PensionPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -45,6 +51,7 @@ export default function PensionPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">The core trade: mortality credits vs. control</h2>
@@ -136,25 +143,27 @@ export default function PensionPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Can I take part annuity, part lump sum?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Can I take part annuity, part lump sum?</summary>
               <p className="mt-1">Many plans allow bifurcation — annuitize enough to cover essential spending, take the rest as a lump sum for flexibility and legacy. Ask for a split illustration; not all plans offer it.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">How do survivor options change payments?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">How do survivor options change payments?</summary>
               <p className="mt-1">Joint-and-survivor options typically reduce payments 10–20% versus single life, with higher survivor percentages costing more. Spousal consent in writing is required to waive joint coverage.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do pensions get COLAs?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do pensions get COLAs?</summary>
               <p className="mt-1">Federal (FERS/CSRS) and Social Security do; most private pensions do not. A fixed annuity loses roughly half its purchasing power in 24 years at 3% inflation — budget accordingly.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What if my employer offers a buyout window?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What if my employer offers a buyout window?</summary>
               <p className="mt-1">Limited-time lump-sum windows use current segment rates — compare against the annuity&apos;s implied yield, get a retail SPIA quote, and never let the deadline rush underwriting you wouldn&apos;t otherwise accept.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -169,6 +178,22 @@ export default function PensionPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "Pension vs. Lump Sum: Which to Take | LoanPay Retire", description: "Pension annuity vs. lump sum: mortality credits, breakeven math, inflation, survivor options, company risk, and rollover rules.", url: "https://retire.loanpaylogic.com/pension-vs-lump-sum" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Can I take part annuity, part lump sum?","answer":"Many plans allow bifurcation — annuitize enough to cover essential spending, take the rest as a lump sum for flexibility and legacy. Ask for a split illustration; not all plans offer it."},{"question":"How do survivor options change payments?","answer":"Joint-and-survivor options typically reduce payments 10–20% versus single life, with higher survivor percentages costing more. Spousal consent in writing is required to waive joint coverage."},{"question":"Do pensions get COLAs?","answer":"Federal (FERS/CSRS) and Social Security do; most private pensions do not. A fixed annuity loses roughly half its purchasing power in 24 years at 3% inflation — budget accordingly."},{"question":"What if my employer offers a buyout window?","answer":"Limited-time lump-sum windows use current segment rates — compare against the annuity's implied yield, get a retail SPIA quote, and never let the deadline rush underwriting you wouldn't otherwise accept."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "Pension vs. Lump Sum: Which to Take | LoanPay Retire", url: "https://retire.loanpaylogic.com/pension-vs-lump-sum" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }

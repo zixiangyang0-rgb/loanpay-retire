@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdSlot from "../../components/AdSlot";
+import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
 
 export const metadata: Metadata = {
   title: "401(k) Contribution Limits 2026 | LoanPay Retire",
@@ -36,6 +38,10 @@ export default function Four01kLimitsPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
+      <p className="mt-4 text-center text-xs text-slate-400">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
+      </p>
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -46,6 +52,7 @@ export default function Four01kLimitsPage() {
             ))}
           </ol>
         </section>
+        <AdSlot format="in-article" slot="TODO-retire-inarticle-1" />
 
         <section>
           <h2 className="text-xl font-bold text-white">Every 2026 number in one table</h2>
@@ -126,25 +133,27 @@ export default function Four01kLimitsPage() {
           </p>
         </section>
 
-        <section>
+                <AdSlot format="display" slot="TODO-retire-display-1" />
+        <AdSlot format="multiplex" slot="TODO-retire-multiplex-1" />
+<section>
           <h2 className="text-xl font-bold text-white">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Do 401(k) and 403(b) limits stack?</h3>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Do 401(k) and 403(b) limits stack?</summary>
               <p className="mt-1">No — one $24,500 elective-deferral cap covers 401(k), 403(b), and SARSEP deferrals combined. Governmental 457(b) plans carry a separate $24,500 cap, a rare true double-dip.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Should the super catch-up change my timing?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Should the super catch-up change my timing?</summary>
               <p className="mt-1">If you turn 60–63 in 2026, you get the $11,250 slot only this window — consider bunching bonuses or deferred comp into these years, and confirm Roth catch-up mechanics with HR.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">Does the match count toward $24,500?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">Does the match count toward $24,500?</summary>
               <p className="mt-1">No. The $24,500 counts only your elective deferrals (pre-tax plus Roth). Employer matches and profit-sharing count toward the $72,000 total ceiling instead.</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
-              <h3 className="font-semibold text-white">What if I exceed the limit?</h3>
+            </details>
+            <details className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer font-semibold text-white">What if I exceed the limit?</summary>
               <p className="mt-1">Notify the plan immediately and request a corrective distribution of the excess plus earnings by April 15. Miss the deadline and the excess is taxed in both the contribution year and the withdrawal year.</p>
-            </div>
+            </details>
           </div>
         </section>
 
@@ -159,6 +168,22 @@ export default function Four01kLimitsPage() {
           </p>
         </section>
       </article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "401(k) Contribution Limits 2026 | LoanPay Retire", description: "2026 401(k) limits: $24,500 elective deferrals, $8,000 catch-up at 50+ ($11,250 at 60–63), $72,000 total, plus employer match and HCE rules.", url: "https://retire.loanpaylogic.com/401k-contribution-limits-2026" })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Do 401(k) and 403(b) limits stack?","answer":"No — one $24,500 elective-deferral cap covers 401(k), 403(b), and SARSEP deferrals combined. Governmental 457(b) plans carry a separate $24,500 cap, a rare true double-dip."},{"question":"Should the super catch-up change my timing?","answer":"If you turn 60–63 in 2026, you get the $11,250 slot only this window — consider bunching bonuses or deferred comp into these years, and confirm Roth catch-up mechanics with HR."},{"question":"Does the match count toward $24,500?","answer":"No. The $24,500 counts only your elective deferrals (pre-tax plus Roth). Employer matches and profit-sharing count toward the $72,000 total ceiling instead."},{"question":"What if I exceed the limit?","answer":"Notify the plan immediately and request a corrective distribution of the excess plus earnings by April 15. Miss the deadline and the excess is taxed in both the contribution year and the withdrawal year."}])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "401(k) Contribution Limits 2026 | LoanPay Retire", url: "https://retire.loanpaylogic.com/401k-contribution-limits-2026" }])) }}
+      />
+      <p className="mt-6 text-center text-xs text-slate-500">
+        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
+        <a href="/disclaimer" className="underline underline-offset-2">Educational use only — not financial advice</a>
+      </p>
     </div>
   );
 }
