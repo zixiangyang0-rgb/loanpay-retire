@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     description:
       "Plan retirement with free educational guides on accounts, Social Security, withdrawals, health costs, and estate basics.",
   },
+  other: {
+    "google-adsense-account": "ca-pub-4906207495792820",
+  },
 };
 
 const navLinks = [
@@ -74,6 +77,13 @@ function Footer() {
       <p className="mt-4">
         &copy; {new Date().getFullYear()} retire.loanpaylogic.com. Educational content only, not
         financial advice.
+      </p>
+      <p className="mt-2 text-xs">
+        LoanPay Logic Network:{" "}
+        <a href="https://loanpaylogic.com" className="underline hover:text-white">FIRE &amp; Mortgage Calculators</a>{" "}
+        &middot; <a href="https://tax.loanpaylogic.com" className="underline hover:text-white">Tax Estimators</a>{" "}
+        &middot; <a href="https://save.loanpaylogic.com" className="underline hover:text-white">High-Yield Savings</a>{" "}
+        &middot; <a href="https://insurance.loanpaylogic.com" className="underline hover:text-white">Insurance</a>
       </p>
     </footer>
   );
