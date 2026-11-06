@@ -185,6 +185,17 @@ export default function HowMuchPage() {
             </li>
           </ul>
         </nav>
+        <section aria-label="Official sources" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Official sources</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <a href="https://www.ssa.gov/benefits/retirement/" className="underline">Social Security Retirement Benefits (ssa.gov)</a> — official benefit estimates, COLA notices, and earnings-test limits.
+            </li>
+            <li>
+              <a href="https://www.investor.gov/" className="underline">Investor.gov (SEC)</a> — unbiased retirement and investing education.
+            </li>
+          </ul>
+        </section>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. All projections are hypothetical
