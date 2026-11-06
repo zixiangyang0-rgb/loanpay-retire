@@ -19,10 +19,12 @@ const ROUTES: { url: string; priority: number; changeFrequency: "weekly" | "mont
   { url: "/when-to-take-social-security", priority: 0.9, changeFrequency: "monthly" },
   { url: "/social-security-taxation-guide", priority: 0.8, changeFrequency: "monthly" },
   { url: "/cola-social-security-2026", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/when-to-take-social-security-calculator", priority: 0.8, changeFrequency: "monthly" },
   // Cluster C — withdrawals
   { url: "/rmd-rules-2026", priority: 0.9, changeFrequency: "monthly" },
   { url: "/rmd-calculator", priority: 0.9, changeFrequency: "monthly" },
   { url: "/how-much-do-i-need-to-retire", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/retirement-budget-checklist-55-65", priority: 0.8, changeFrequency: "monthly" },
   { url: "/4-percent-rule-explained", priority: 0.8, changeFrequency: "monthly" },
   { url: "/retirement-withdrawal-order-strategy", priority: 0.8, changeFrequency: "monthly" },
   { url: "/early-withdrawal-penalty-59-half", priority: 0.8, changeFrequency: "monthly" },
