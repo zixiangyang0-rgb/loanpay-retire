@@ -158,6 +158,23 @@ export default function RothIraLimitsPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/backdoor-roth-ira-guide">Backdoor Roth IRA Guide</Link> — the legal high-income Roth path: steps, Form 8606, pro-rata rule.
+            </li>
+            <li>
+              <Link className="underline" href="/mega-backdoor-roth-explained">Mega Backdoor Roth Explained</Link> — after-tax 401(k) + in-service withdrawals for very large Roth sums.
+            </li>
+            <li>
+              <Link className="underline" href="/roth-401k-vs-roth-ira">Roth 401(k) vs. Roth IRA</Link> — no-income-cap Roth at work versus the flexible account you own.
+            </li>
+            <li>
+              <Link className="underline" href="/catch-up-contributions-after-50">Catch-Up Contributions After 50</Link> — the 50+ bonus, the 60–63 super catch-up, and IRA extras.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. Income bands follow IRS 2026

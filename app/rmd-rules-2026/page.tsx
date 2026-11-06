@@ -162,6 +162,23 @@ export default function RmdRulesPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/rmd-calculator">RMD Calculator</Link> — estimate this year&apos;s required withdrawal from any balance.
+            </li>
+            <li>
+              <Link className="underline" href="/retirement-withdrawal-order-strategy">Retirement Withdrawal Order Strategy</Link> — taxable, traditional, Roth: the sequence that cuts lifetime tax.
+            </li>
+            <li>
+              <Link className="underline" href="/beneficiaries-estate-basics">Beneficiaries &amp; Estate Basics</Link> — beneficiary forms beat wills, the 10-year rule, and TOD deeds.
+            </li>
+            <li>
+              <Link className="underline" href="/early-withdrawal-penalty-59-half">Early Withdrawal Penalty: 59½</Link> — the 10% penalty, its many exceptions, and SEPP lifelines.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. Confirm divisors in IRS

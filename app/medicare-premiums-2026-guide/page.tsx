@@ -164,6 +164,23 @@ export default function MedicarePage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/healthcare-costs-in-retirement">Healthcare Costs in Retirement</Link> — what a 65-year-old couple may spend — and how to plan for it.
+            </li>
+            <li>
+              <Link className="underline" href="/hsa-retirement-strategy">HSA Retirement Strategy</Link> — triple tax advantage, investing the balance, and the shoebox method.
+            </li>
+            <li>
+              <Link className="underline" href="/cola-social-security-2026">COLA &amp; Social Security 2026</Link> — the 2.8% cost-of-living adjustment, earnings test, and wage base.
+            </li>
+            <li>
+              <Link className="underline" href="/social-security-taxation-guide">Social Security Taxation Guide</Link> — the 0% / 50% / 85% inclusion tiers and how to shrink them.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not insurance or financial advice. Confirm 2026

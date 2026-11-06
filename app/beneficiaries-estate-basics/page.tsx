@@ -166,6 +166,23 @@ export default function EstatePage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/ira-rollover-guide">IRA Rollover Guide</Link> — direct vs. indirect rollovers, the 60-day clock, and pro-rata traps.
+            </li>
+            <li>
+              <Link className="underline" href="/rmd-rules-2026">RMD Rules 2026</Link> — age 73 vs. 75 under SECURE 2.0, deadlines, and the 25% penalty.
+            </li>
+            <li>
+              <Link className="underline" href="/pension-vs-lump-sum">Pension vs. Lump Sum</Link> — annuity checks for life or a lump sum you invest — compared.
+            </li>
+            <li>
+              <Link className="underline" href="/annuity-pros-cons">Annuity Pros &amp; Cons</Link> — SPIAs, DIAs, and variable annuities: costs vs. guarantees.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not legal, tax, or financial advice. Estate rules

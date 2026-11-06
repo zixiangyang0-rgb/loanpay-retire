@@ -157,6 +157,23 @@ export default function TdfPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/401k-contribution-limits-2026">401(k) Contribution Limits 2026</Link> — $24,500 plus $8,000 catch-ups ($11,250 at 60–63) — who gets what.
+            </li>
+            <li>
+              <Link className="underline" href="/ira-rollover-guide">IRA Rollover Guide</Link> — direct vs. indirect rollovers, the 60-day clock, and pro-rata traps.
+            </li>
+            <li>
+              <Link className="underline" href="/how-much-do-i-need-to-retire">How Much Do I Need to Retire?</Link> — replacement ratios, the 25x shortcut, and a worked example.
+            </li>
+            <li>
+              <Link className="underline" href="/4-percent-rule-explained">The 4% Rule Explained</Link> — where 4% came from, what it misses, and flexible alternatives.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. Glide paths and fees vary by

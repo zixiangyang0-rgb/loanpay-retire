@@ -168,6 +168,23 @@ export default function HowMuchPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/4-percent-rule-explained">The 4% Rule Explained</Link> — where 4% came from, what it misses, and flexible alternatives.
+            </li>
+            <li>
+              <Link className="underline" href="/retirement-withdrawal-order-strategy">Retirement Withdrawal Order Strategy</Link> — taxable, traditional, Roth: the sequence that cuts lifetime tax.
+            </li>
+            <li>
+              <Link className="underline" href="/when-to-take-social-security">When to Take Social Security</Link> — 62 vs. 67 vs. 70 with break-even math and spousal angles.
+            </li>
+            <li>
+              <Link className="underline" href="/healthcare-costs-in-retirement">Healthcare Costs in Retirement</Link> — what a 65-year-old couple may spend — and how to plan for it.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. All projections are hypothetical

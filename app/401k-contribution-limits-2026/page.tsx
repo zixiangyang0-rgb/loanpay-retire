@@ -157,6 +157,23 @@ export default function Four01kLimitsPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/catch-up-contributions-after-50">Catch-Up Contributions After 50</Link> — the 50+ bonus, the 60–63 super catch-up, and IRA extras.
+            </li>
+            <li>
+              <Link className="underline" href="/traditional-vs-roth-401k">Traditional vs. Roth 401(k)</Link> — deduction now or tax-free later — the bracket math that decides.
+            </li>
+            <li>
+              <Link className="underline" href="/roth-401k-vs-roth-ira">Roth 401(k) vs. Roth IRA</Link> — no-income-cap Roth at work versus the flexible account you own.
+            </li>
+            <li>
+              <Link className="underline" href="/mega-backdoor-roth-explained">Mega Backdoor Roth Explained</Link> — after-tax 401(k) + in-service withdrawals for very large Roth sums.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. Limits follow IRS Notice 2025-67

@@ -167,6 +167,23 @@ export default function PensionPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/annuity-pros-cons">Annuity Pros &amp; Cons</Link> — SPIAs, DIAs, and variable annuities: costs vs. guarantees.
+            </li>
+            <li>
+              <Link className="underline" href="/retirement-withdrawal-order-strategy">Retirement Withdrawal Order Strategy</Link> — taxable, traditional, Roth: the sequence that cuts lifetime tax.
+            </li>
+            <li>
+              <Link className="underline" href="/how-much-do-i-need-to-retire">How Much Do I Need to Retire?</Link> — replacement ratios, the 25x shortcut, and a worked example.
+            </li>
+            <li>
+              <Link className="underline" href="/social-security-taxation-guide">Social Security Taxation Guide</Link> — the 0% / 50% / 85% inclusion tiers and how to shrink them.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. Pension terms vary by plan;

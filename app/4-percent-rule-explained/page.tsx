@@ -182,6 +182,23 @@ export default function FourPercentPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/retirement-withdrawal-order-strategy">Retirement Withdrawal Order Strategy</Link> — taxable, traditional, Roth: the sequence that cuts lifetime tax.
+            </li>
+            <li>
+              <Link className="underline" href="/how-much-do-i-need-to-retire">How Much Do I Need to Retire?</Link> — replacement ratios, the 25x shortcut, and a worked example.
+            </li>
+            <li>
+              <Link className="underline" href="/rmd-rules-2026">RMD Rules 2026</Link> — age 73 vs. 75 under SECURE 2.0, deadlines, and the 25% penalty.
+            </li>
+            <li>
+              <Link className="underline" href="/when-to-take-social-security">When to Take Social Security</Link> — 62 vs. 67 vs. 70 with break-even math and spousal angles.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. Spending rules are historical

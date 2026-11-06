@@ -160,6 +160,23 @@ export default function MegaBackdoorPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/backdoor-roth-ira-guide">Backdoor Roth IRA Guide</Link> — the legal high-income Roth path: steps, Form 8606, pro-rata rule.
+            </li>
+            <li>
+              <Link className="underline" href="/401k-contribution-limits-2026">401(k) Contribution Limits 2026</Link> — $24,500 plus $8,000 catch-ups ($11,250 at 60–63) — who gets what.
+            </li>
+            <li>
+              <Link className="underline" href="/roth-401k-vs-roth-ira">Roth 401(k) vs. Roth IRA</Link> — no-income-cap Roth at work versus the flexible account you own.
+            </li>
+            <li>
+              <Link className="underline" href="/catch-up-contributions-after-50">Catch-Up Contributions After 50</Link> — the 50+ bonus, the 60–63 super catch-up, and IRA extras.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not financial advice. Plan provisions vary widely;

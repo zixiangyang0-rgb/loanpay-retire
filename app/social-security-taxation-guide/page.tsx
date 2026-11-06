@@ -165,6 +165,23 @@ export default function SSTaxPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/when-to-take-social-security">When to Take Social Security</Link> — 62 vs. 67 vs. 70 with break-even math and spousal angles.
+            </li>
+            <li>
+              <Link className="underline" href="/cola-social-security-2026">COLA &amp; Social Security 2026</Link> — the 2.8% cost-of-living adjustment, earnings test, and wage base.
+            </li>
+            <li>
+              <Link className="underline" href="/retirement-withdrawal-order-strategy">Retirement Withdrawal Order Strategy</Link> — taxable, traditional, Roth: the sequence that cuts lifetime tax.
+            </li>
+            <li>
+              <Link className="underline" href="/rmd-rules-2026">RMD Rules 2026</Link> — age 73 vs. 75 under SECURE 2.0, deadlines, and the 25% penalty.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not tax or financial advice. Confirm thresholds in IRS

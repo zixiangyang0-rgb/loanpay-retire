@@ -165,6 +165,23 @@ export default function BackdoorPage() {
           </div>
         </section>
 
+        <nav aria-label="Related guides" className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+          <p className="text-sm font-semibold">Keep reading</p>
+          <ul className="mt-3 flex flex-col gap-2 text-sm leading-relaxed opacity-90">
+            <li>
+              <Link className="underline" href="/roth-ira-income-limits-2026">Roth IRA Income Limits 2026</Link> — $153K–$168K single / $242K–$252K joint phase-outs and workarounds.
+            </li>
+            <li>
+              <Link className="underline" href="/mega-backdoor-roth-explained">Mega Backdoor Roth Explained</Link> — after-tax 401(k) + in-service withdrawals for very large Roth sums.
+            </li>
+            <li>
+              <Link className="underline" href="/ira-rollover-guide">IRA Rollover Guide</Link> — direct vs. indirect rollovers, the 60-day clock, and pro-rata traps.
+            </li>
+            <li>
+              <Link className="underline" href="/roth-401k-vs-roth-ira">Roth 401(k) vs. Roth IRA</Link> — no-income-cap Roth at work versus the flexible account you own.
+            </li>
+          </ul>
+        </nav>
         <section className="rounded-xl border border-amber-200/20 bg-amber-200/5 p-5 text-xs leading-relaxed text-amber-100/90">
           <p>
             This is general education, not tax or financial advice. Confirm Form 8606
