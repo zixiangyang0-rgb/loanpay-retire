@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdSlot from "../../components/AdSlot";
-import { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from "../../lib/schema";
+import { Byline, GuideSchema } from "../components/schema";
 
 export const metadata: Metadata = {
   title: "The 4% Rule Explained (and Its Limits) | LoanPay Retire",
@@ -21,6 +21,29 @@ const CHECKLIST = [
   "Flexible methods (guardrails, Kitces ratcheting, RMD-based) let spending breathe with markets.",
 ];
 
+const FAQS = [
+  {
+    question: "Does 4% include fees and taxes?",
+    answer:
+      "No — Bengen's 4% is gross portfolio withdrawal. A 1% advisory fee plus taxes means only ~2.5–3% reaches your checking account. Budget fees and taxes inside the 4%, not on top.",
+  },
+  {
+    question: "What asset mix does 4% assume?",
+    answer:
+      "Roughly 50–75% stocks. Very conservative portfolios (mostly bonds/cash) historically failed 4% more often — growth assets fund multi-decade inflation adjustments.",
+  },
+  {
+    question: "Should early retirees use 4%?",
+    answer:
+      "Cautiously — 40–50 year horizons historically needed ~3.25–3.5% rigid, or 4%+ with guardrail flexibility and part-time income. Healthcare before Medicare at 65 is a separate budget line.",
+  },
+  {
+    question: "How often should I revisit my rate?",
+    answer:
+      "Annually or after ±20% portfolio moves. Ratchet up after strong years, trim after poor ones, and recheck taxes, RMDs, and IRMAA each December.",
+  },
+];
+
 export default function FourPercentPage() {
   return (
     <div className="mx-auto w-full max-w-3xl px-6 pb-16 pt-8">
@@ -37,10 +60,7 @@ export default function FourPercentPage() {
         </p>
         <p className="mt-4 text-xs text-slate-500">Updated: October 2026</p>
       </section>
-      <p className="mt-4 text-center text-xs text-slate-400">
-        By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
-        <a href="/disclaimer" className="underline underline-offset-2">Educational use only</a>
-      </p>
+        <Byline updated="October 2026" />
 
       <article className="mt-10 space-y-8 text-sm leading-relaxed text-slate-300">
         <section className="glass-card rounded-2xl p-6 sm:p-8">
@@ -173,17 +193,11 @@ export default function FourPercentPage() {
           </p>
         </section>
       </article>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({ title: "The 4% Rule Explained (and Its Limits) | LoanPay Retire", description: "The 4% rule: Bengen's research, inflation adjustments, sequence risk, fees, longevity, and flexible alternatives like guardrails.", url: "https://retire.loanpaylogic.com/4-percent-rule-explained" })) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([{"question":"Does 4% include fees and taxes?","answer":"No — Bengen's 4% is gross portfolio withdrawal. A 1% advisory fee plus taxes means only ~2.5–3% reaches your checking account. Budget fees and taxes inside the 4%, not on top."},{"question":"What asset mix does 4% assume?","answer":"Roughly 50–75% stocks. Very conservative portfolios (mostly bonds/cash) historically failed 4% more often — growth assets fund multi-decade inflation adjustments."},{"question":"Should early retirees use 4%?","answer":"Cautiously — 40–50 year horizons historically needed ~3.25–3.5% rigid, or 4%+ with guardrail flexibility and part-time income. Healthcare before Medicare at 65 is a separate budget line."},{"question":"How often should I revisit my rate?","answer":"Annually or after ±20% portfolio moves. Ratchet up after strong years, trim after poor ones, and recheck taxes, RMDs, and IRMAA each December."}])) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", url: "https://retire.loanpaylogic.com" }, { name: "The 4% Rule Explained (and Its Limits) | LoanPay Retire", url: "https://retire.loanpaylogic.com/4-percent-rule-explained" }])) }}
+      <GuideSchema
+        title="The 4% Rule Explained (and Its Limits) | LoanPay Retire"
+        description="The 4% rule: Bengen's research, inflation adjustments, sequence risk, fees, longevity, and flexible alternatives like guardrails."
+        slug="4-percent-rule-explained"
+        faqs={FAQS}
       />
       <p className="mt-6 text-center text-xs text-slate-500">
         By LoanPay Editorial · Updated October 2026 · Reviewed for accuracy ·{" "}
