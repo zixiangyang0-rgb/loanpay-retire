@@ -180,7 +180,7 @@ export default function RetirementBudgetChecklistPage() {
             </details>
             <details className="group rounded-xl border border-white/10 bg-white/[0.02] p-4">
               <summary className="cursor-pointer font-semibold text-white">When should we do Roth conversions?</summary>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">The low-income window between retirement and RMD age (73/75) is prime: fill the 12% and 22% brackets with conversions to shrink future RMDs and IRMAA exposure.</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-300">The low-income window between retirement and RMD age (73/75) is prime: fill the 12% and 22% brackets with conversions to shrink future RMDs and IRMAA exposure. Even $40,000 a year of conversions through your sixties can move six figures out of the tax-deferred bucket before required distributions begin.</p>
             </details>
           </div>
         </section>
